@@ -1,6 +1,6 @@
 # Locate or install the tool
 
-Requires Windows 10 2004 / Windows 11 x64 and .NET 10 Desktop Runtime. The executable is framework-dependent and does not bundle .NET.
+Requires Windows 10 2004 / Windows 11 x64 and .NET 10 Desktop Runtime. The deployment is framework-dependent and does not bundle .NET. The EXE, application DLL, dependency DLLs, .deps.json, and .runtimeconfig.json remain separate files. Copy the complete bin/win-x64 directory when deploying; copying only the EXE does not work.
 
 The local deployment writes `config.local.json` beside `SKILL.md` with an absolute `executable` path. Inspect that configuration when locating the installed tool. It is machine-specific and stays out of Git.
 

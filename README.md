@@ -2,7 +2,9 @@
 
 C# Windows 命令行截图工具，供 AI-Agent 通过进程调用。支持 WGC、PrintWindow 以及显式的自动回退；每次调用在 stdout 返回一行 UTF-8 JSON，截图保存为 PNG。
 
-发布版本：1.0.0，Windows x64，**framework-dependent 单文件 EXE，不包含 .NET Runtime**。要求 Windows 10 2004 / Windows 11，以及 x64 `.NET 10 Desktop Runtime`。本机已确认安装 `Microsoft.WindowsDesktop.App 10.0.6`。
+发布版本：1.0.0，Windows x64，**framework-dependent 目录发布，EXE 与 DLL 分开，不包含 .NET Runtime**。要求 Windows 10 2004 / Windows 11，以及 x64 `.NET 10 Desktop Runtime`。本机已确认安装 `Microsoft.WindowsDesktop.App 10.0.6`。
+
+部署时复制整个 `bin/win-x64` 目录。`AgentCapture.exe` 是启动器；应用程序集、依赖 DLL、`.deps.json` 和 `.runtimeconfig.json` 都独立放在该目录，不嵌入 EXE。单独复制 EXE 无法运行。
 
 ## 调用方式
 
@@ -121,7 +123,7 @@ Python 进程调用示例见 [examples/capture_from_python.py](./examples/captur
 ## 构建与验证
 
 ```powershell
-# 要求 .NET 10 SDK；脚本默认生成不包含 Runtime 的单文件发布
+# 要求 .NET 10 SDK；脚本生成 EXE 与 DLL 分开的目录发布，不包含 Runtime
 powershell -NoProfile -ExecutionPolicy Bypass -File .\build.ps1
 
 # 运行本机验证，不操作第三方应用
