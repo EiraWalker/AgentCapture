@@ -1,0 +1,12 @@
+bin/
+obj/
+work/
+validation/
+*.user
+**/config.local.json
+**/.skillshare-meta.json
+**/__pycache__/
+*.py[cod]
+release-manifest.json
+*.zip
+*.zip.sha256

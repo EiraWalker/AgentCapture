@@ -1,0 +1,6 @@
+interface:
+  display_name: "AgentCapture"
+  short_description: "Capture Windows app windows without foreground activation"
+  default_prompt: "Use $agentcapture to capture an already-running Windows application without bringing its window to the foreground."
+policy:
+  allow_implicit_invocation: true

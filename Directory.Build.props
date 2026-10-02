@@ -1,0 +1,6 @@
+<Project>
+  <PropertyGroup Condition="'$(AgentCaptureBuildRoot)' != ''">
+    <BaseIntermediateOutputPath>$(AgentCaptureBuildRoot)\obj\</BaseIntermediateOutputPath>
+    <BaseOutputPath>$(AgentCaptureBuildRoot)\build\</BaseOutputPath>
+  </PropertyGroup>
+</Project>
