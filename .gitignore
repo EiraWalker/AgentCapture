@@ -2,6 +2,7 @@ bin/
 obj/
 work/
 validation/
+artifacts/
 *.user
 **/config.local.json
 **/.skillshare-meta.json

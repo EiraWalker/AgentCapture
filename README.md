@@ -6,6 +6,12 @@ C# Windows 命令行截图工具，供 AI-Agent 通过进程调用。支持 WGC�
 
 部署时复制整个 `bin/win-x64` 目录。`AgentCapture.exe` 是启动器；应用程序集、依赖 DLL、`.deps.json` 和 `.runtimeconfig.json` 都独立放在该目录，不嵌入 EXE。单独复制 EXE 无法运行。
 
+## 下载发布版
+
+从 [GitHub Releases](https://github.com/EriaWalker/AgentCapture/releases/latest) 下载 `AgentCapture-windows-x64.zip`，解压后运行 `AgentCapture/bin/win-x64/AgentCapture.exe`。包内已包含所需应用 DLL，无需编译；本机需要安装上面注明的 .NET 10 Desktop Runtime x64。下载旁边的 `.sha256` 文件可校验压缩包。
+
+源码仓库的生成文件统一写入 `artifacts/`（交付包）、`work/`（临时工作文件）、`bin/win-x64/`（程序）和 `validation/`（验证结果），均不提交到 Git。
+
 ## 调用方式
 
 ```powershell
