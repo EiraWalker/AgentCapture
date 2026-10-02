@@ -9,7 +9,7 @@ AgentCapture 是供 AI-Agent 调用的 C# Windows 命令行截图工具。它通
 
 ## 安装发布版
 
-**运行前需安装 .NET 10 Desktop Runtime x64。发布包不包含 .NET Runtime。** 仅安装普通 .NET Runtime 不够。运行发布版不需要 SDK。
+**运行前需安装 .NET 10 Desktop Runtime x64。发布包不包含 .NET Runtime。运行发布版不需要 SDK。
 
 支持 Windows 10 2004 或更新版本，以及 Windows 11。发布版为 Windows x64，版本为 1.0.0。
 
