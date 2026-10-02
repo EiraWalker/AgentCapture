@@ -1,5 +1,10 @@
 # AgentCapture
 
+> [!IMPORTANT]
+> **目标软件窗口应保持打开且未最小化。** 窗口可以被其他应用遮挡，无需切到前台。
+>
+> 如果目标窗口已最小化，可以尝试 `--method printwindow`，但**需要目标程序支持 PrintWindow 绘制**；否则可能返回空白、不完整或旧画面，不能保证取得有效截图。WGC 路径在本工具中会拒绝最小化窗口。
+
 C# Windows 命令行截图工具，供 AI-Agent 通过进程调用。支持 WGC、PrintWindow 以及显式的自动回退；每次调用在 stdout 返回一行 UTF-8 JSON，截图保存为 PNG。
 
 发布版本：1.0.0，Windows x64，**framework-dependent 目录发布，EXE 与 DLL 分开，不包含 .NET Runtime**。要求 Windows 10 2004 / Windows 11，以及 x64 `.NET 10 Desktop Runtime`。本机已确认安装 `Microsoft.WindowsDesktop.App 10.0.6`。
